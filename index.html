@@ -121,7 +121,7 @@
     </div>
 
     <main class="max-w-7xl mx-auto">
-      <section id="home" class="welcome mb-20 pt-10">
+      <section id="home" class="welcome mb-20 pt-10 min-h-[200px]">
         <div class="sm:px-8">
           <img
             src="./images/living-green-globe.png"
@@ -157,7 +157,7 @@
         </div>
       </section>
 
-      <section id="about" class="about text-center mb-20">
+      <section id="about" class="about text-center mb-20 min-h-[200px]">
         <div class="space-y-16">
           <div class="about__mission max-w-3xl mx-auto">
             <div>
@@ -220,7 +220,7 @@
         </div>
       </section>
 
-      <section id="projects" class="projects text-center mb-20">
+      <section id="projects" class="projects text-center mb-20 min-h-[200px]">
         <h2 class="text-3xl font-bold mb-10 text-green-700">
           Notable Projects
         </h2>
@@ -274,7 +274,7 @@
         </div>
       </section>
 
-      <section id="team" class="team text-center mb-20">
+      <section id="team" class="team text-center mb-20 min-h-[200px]">
         <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
         <div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
           <div
@@ -304,7 +304,7 @@
         </div>
       </section>
 
-      <section id="contact" class="contact text-center mb-20">
+      <section id="contact" class="contact text-center mb-20 min-h-[200px]">
         <h2 class="text-3xl font-bold mb-10 text-green-700">Get In Touch</h2>
         <div class="max-w-xl mx-auto space-y-8">
           <p class="text-lg text-gray-700">
@@ -334,14 +334,11 @@
                 required
               />
             </div>
-            <div>
-              <textarea
-                placeholder="Your Message"
-                rows="4"
-                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
-              >
-              </textarea>
-            </div>
+            <textarea
+              placeholder="Your Message"
+              rows="4"
+              class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+            ></textarea>
             <button
               type="submit"
               class="bg-green-700 text-white px-8 py-3 rounded-md hover:bg-green-800 transition-colors"
@@ -382,8 +379,9 @@
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll("nav a, #mobile-menu a");
 
+      // Lower threshold for better detection
       const observerOptions = {
-        threshold: 0.5,
+        threshold: 0.2,
       };
 
       const observer = new IntersectionObserver((entries) => {
@@ -401,6 +399,14 @@
       }, observerOptions);
 
       sections.forEach((section) => observer.observe(section));
+
+      // Fallback: highlight on click for instant feedback
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          navLinks.forEach((l) => l.classList.remove("text-green-700"));
+          this.classList.add("text-green-700");
+        });
+      });
     </script>
   </body>
 </html>
