@@ -1,0 +1,406 @@
+<!-- Living Green Club PAU Website -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAU Living Green</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="px-5 sm:px-8 font-['Plus_Jakarta_Sans']">
+    <header
+      class="py-5 flex justify-between items-center sticky top-0 bg-white/95 backdrop-blur-sm z-50"
+    >
+      <div>
+        <img
+          src="./images/logo.png"
+          width="150"
+          height="150"
+          alt="Living Green Logo"
+          class="w-32 sm:w-36"
+        />
+      </div>
+      <div
+        class="sm:hidden p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
+        id="menu-toggle"
+      >
+        <img
+          src="./images/nav-toggle.png"
+          width="18"
+          height="18"
+          alt="Menu"
+          class="w-5 h-5"
+        />
+      </div>
+      <nav class="hidden sm:block">
+        <ul class="flex gap-8 items-center">
+          <li>
+            <a href="#home" class="hover:text-green-700 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="hover:text-green-700 transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-green-700 transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#team" class="hover:text-green-700 transition-colors"
+              >Team</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition-colors"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out bg-white shadow-lg w-64 p-6 z-40"
+    >
+      <div
+        class="absolute top-7 right-6 p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
+        id="close-menu"
+      >
+        <img
+          src="./images/nav-toggle.png"
+          width="18"
+          height="18"
+          alt="Close Menu"
+          class="w-5 h-5 rotate-90"
+        />
+      </div>
+      <ul class="flex flex-col gap-6 pt-12">
+        <li>
+          <a href="#home" class="hover:text-green-700 transition-colors"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="hover:text-green-700 transition-colors"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="#projects" class="hover:text-green-700 transition-colors"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="#team" class="hover:text-green-700 transition-colors"
+            >Team</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition-colors"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <main class="max-w-7xl mx-auto">
+      <section id="home" class="welcome mb-20 pt-10">
+        <div class="sm:px-8">
+          <img
+            src="./images/living-green-globe.png"
+            width="500"
+            height="500"
+            alt="Living Green Globe"
+            class="mt-4 mx-auto max-w-full"
+          />
+          <div class="text-center max-w-3xl mx-auto">
+            <h1 class="mb-4 text-4xl sm:text-5xl font-bold text-green-700">
+              Welcome to the Living Green Club PAU
+            </h1>
+            <p class="mb-8 text-lg sm:text-xl text-gray-700">
+              A community dedicated to promoting environmental awareness,
+              sustainability, and conservation practices within Pan-Atlantic
+              University. Join us in protecting our campus environment, one
+              initiative at a time.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div
+              class="text-white text-center bg-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-800 transition-colors"
+            >
+              <a href="#contact">Join Now</a>
+            </div>
+            <a
+              href="#what-we-do"
+              class="text-green-700 text-center border-2 border-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-50 transition-colors"
+            >
+              View Activities
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about text-center mb-20">
+        <div class="space-y-16">
+          <div class="about__mission max-w-3xl mx-auto">
+            <div>
+              <img
+                src="./images/vision.png"
+                class="mx-auto mb-6 w-20"
+                alt="Eco-friendly light bulb"
+              />
+            </div>
+            <h2 class="text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
+            <hr class="w-24 mx-auto border-green-700 mb-6" />
+            <p class="text-lg text-gray-700">
+              To educate, empower and mobilize PAU students around
+              sustainability, ensuring every campus decision prioritizes
+              environmental integrity, human health, and community well-being.
+            </p>
+          </div>
+
+          <div class="about__what-we-do" id="what-we-do">
+            <h2 class="text-3xl font-bold mb-10 text-green-700">What We Do</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+              <div
+                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+              >
+                <h3 class="font-semibold text-xl">Environmental Audits</h3>
+                <p class="text-gray-600">
+                  Regular walk-through inspections of facilities to identify
+                  hazards and provide maintenance recommendations.
+                </p>
+              </div>
+              <div
+                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+              >
+                <h3 class="font-semibold text-xl">Hazard Management</h3>
+                <p class="text-gray-600">
+                  Monitoring and controlling physical, chemical, biological &
+                  psychosocial risks on campus.
+                </p>
+              </div>
+              <div
+                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+              >
+                <h3 class="font-semibold text-xl">Awareness Campaigns</h3>
+                <p class="text-gray-600">
+                  Leading initiatives like the Styrofoam ban and organizing
+                  educational pop-ups in the student centre.
+                </p>
+              </div>
+              <div
+                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+              >
+                <h3 class="font-semibold text-xl">Action Days</h3>
+                <p class="text-gray-600">
+                  Organizing tree-planting events, campus clean-ups, and
+                  educational visits to wildlife sanctuaries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects text-center mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-green-700">
+          Notable Projects
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="flex flex-col gap-4">
+            <div>
+              <img
+                src="./images/carousel1.jpg"
+                alt="NCF Tree Planting"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <h3 class="font-semibold text-xl">NCF Tree-Planting Exercise</h3>
+            <hr class="w-16 mx-auto border-green-700" />
+            <p class="text-gray-600">
+              Collaborated with NCF Green Recovery Nigeria to plant over 200
+              trees across campus, enhancing our green spaces and carbon
+              absorption capacity.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <img
+                src="./images/carousel2.jpg"
+                alt="Sustainability Workshop"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <h3 class="font-semibold text-xl">PDS with Industry Leaders</h3>
+            <hr class="w-16 mx-auto border-green-700" />
+            <p class="text-gray-600">
+              Personal Development Series featuring Mrs. Odunayo Sanya (MTN
+              Foundation) and Mrs. Dayo Aderugbo on environmental leadership.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <img
+                src="./images/carousel3.jpg"
+                alt="Community Outreach"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <h3 class="font-semibold text-xl">Wildlife Sanctuary Visit</h3>
+            <hr class="w-16 mx-auto border-green-700" />
+            <p class="text-gray-600">
+              Educational field trip to Green Fingers Wildlife Sanctuary,
+              learning about habitat protection and conservation efforts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team text-center mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
+        <div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div
+            class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+          >
+            <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
+            <p class="text-green-700">President</p>
+          </div>
+          <div
+            class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+          >
+            <h3 class="font-semibold">Enuma Bosah</h3>
+            <p class="text-green-700">Vice President</p>
+          </div>
+          <div
+            class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+          >
+            <h3 class="font-semibold">Ibukun Afolabi</h3>
+            <p class="text-green-700">Assistant Vice President</p>
+          </div>
+          <div
+            class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+          >
+            <h3 class="font-semibold">Stephanie Chiedu</h3>
+            <p class="text-green-700">Financial Secretary</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact text-center mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-green-700">Get In Touch</h2>
+        <div class="max-w-xl mx-auto space-y-8">
+          <p class="text-lg text-gray-700">
+            Join us in making PAU a more sustainable campus. Follow us on social
+            media or send us a message below.
+          </p>
+          <div class="flex justify-center gap-6">
+            <a
+              href="https://instagram.com/living_green_club_pau"
+              class="text-green-700 hover:text-green-800 transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://linkedin.com/company/living-green-club"
+              class="text-green-700 hover:text-green-800 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <form class="space-y-4">
+            <div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                placeholder="Your Message"
+                rows="4"
+                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+              >
+              </textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-green-700 text-white px-8 py-3 rounded-md hover:bg-green-800 transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 border-t">
+      <p class="text-gray-600">
+        © 2025 Living Green Club PAU. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      // Mobile menu functionality
+      const toggle = document.getElementById("menu-toggle");
+      const close = document.getElementById("close-menu");
+      const menu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll("#mobile-menu a");
+
+      [toggle, close].forEach((btn) =>
+        btn.addEventListener("click", () =>
+          menu.classList.toggle("translate-x-full")
+        )
+      );
+
+      mobileLinks.forEach((link) =>
+        link.addEventListener("click", () =>
+          menu.classList.add("translate-x-full")
+        )
+      );
+
+      // Active section highlighting
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a, #mobile-menu a");
+
+      const observerOptions = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => {
+              if (link.getAttribute("href") === "#" + entry.target.id) {
+                link.classList.add("text-green-700");
+              } else {
+                link.classList.remove("text-green-700");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </body>
+</html>
