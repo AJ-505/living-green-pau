@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+h1 {
+  font-weight: 1000;
+  font-size: 2rem;
+}
+h2 {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
