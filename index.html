@@ -326,10 +326,42 @@
 
       <section id="team" class="team text-center mb-20 min-h-[200px]">
         <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
-        <div class="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid sm:grid-cols-3 gap-6">
           <div
-            class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+            class="px-3 py-10 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
           >
+            <div class="flex items-center gap-3">
+              <!--Class Names: active-slide for the active slide, next-btn and prev-btn for the next and previous buttons respectively-->
+              <!--Prev button-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                width="70"
+                height="70"
+                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300"
+              >
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
+              </svg>
+              <div class="active-slide">
+                <img
+                  src="./images/member11.jpeg"
+                  alt="Chukwurah Raluchukwu"
+                  class="w-full h-60 object-cover mx-auto mb-3 rounded-2xl"
+                />
+              </div>
+              <!--Next button-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                width="70"
+                height="70"
+                class="next-btn hover:bg-[#0000002b] transition-colors duration-300"
+              >
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+              </svg>
+            </div>
             <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
             <p class="text-green-700">President</p>
           </div>
