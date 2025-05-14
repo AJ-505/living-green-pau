@@ -11,10 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="px-5 sm:px-8 font-['Plus_Jakarta_Sans']">
@@ -326,44 +323,57 @@
 
       <section id="team" class="team text-center mb-20 min-h-[200px]">
         <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
-        <div class="grid sm:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 gap-6 px-2 place-items-center place-content-center">
           <div
-            class="px-3 py-10 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
+            class="py-3 sm:py-10 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
           >
-            <div class="flex items-center gap-3">
-              <!--Class Names: active-slide for the active slide, next-btn and prev-btn for the next and previous buttons respectively-->
+            <div class="flex place-self-center items-center gap-0 sm:gap-3 mx-auto">
+              <!--Class Names:slider for the slider container, slide for each slide, active-slide for the active slide, next-btn and prev-btn for the next and previous buttons respectively-->
               <!--Prev button-->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="black"
-                width="70"
-                height="70"
-                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300"
+                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-12 sm:w-60 h-auto"
+                onclick="prevSlide()"
               >
                 <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
               </svg>
-              <div class="active-slide">
-                <img
-                  src="./images/member11.jpeg"
-                  alt="Chukwurah Raluchukwu"
-                  class="w-full h-60 object-cover mx-auto mb-3 rounded-2xl"
-                />
+              <div class="slider">
+                <div class="slide active-slide mx-auto">
+                  <div class="w-40 sm:w-60 h-auto mx-auto">
+                    <img
+                      src="./images/member11.jpeg"
+                      alt="Chukwurah Raluchukwu"
+                      class="max-w-full h-auto object-cover mx-auto mb-3 rounded-2xl"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
+                  <p class="text-green-700">President</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="w-40 sm:w-60 h-auto mx-auto">
+                    <img
+                      src="./images/member9.jpeg"
+                      alt="Samuel Oyefusi"
+                      class="max-w-full h-auto object-cover mx-auto mb-3 rounded-2xl"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Samuel Oyefusi</h3>
+                  <p class="text-green-700">(Role here)</p>
+                </div>
               </div>
               <!--Next button-->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="black"
-                width="70"
-                height="70"
-                class="next-btn hover:bg-[#0000002b] transition-colors duration-300"
+                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-12 sm:w-60 h-auto"
+                onclick="nextSlide()"
               >
                 <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
               </svg>
             </div>
-            <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
-            <p class="text-green-700">President</p>
           </div>
           <div
             class="p-6 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer"
@@ -490,6 +500,33 @@
           this.classList.add("text-green-700");
         });
       });
+
+      //Carousel scripts
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slide");
+
+      let currentSlide = 0;
+      function showSlide(slideIndex) {
+        slides.forEach((slide) => {
+          slide.classList.remove("active-slide");
+        });
+
+        slides[slideIndex].classList.add("active-slide");
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      setInterval(() => {
+        nextSlide();
+      }, 3000);
     </script>
   </body>
 </html>
