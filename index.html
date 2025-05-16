@@ -14,33 +14,81 @@
 
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="px-5 sm:px-8 font-['Plus_Jakarta_Sans']">
+  <body class="font-['Plus_Jakarta_Sans']">
     <header
-      class="py-5 flex justify-between items-center sticky top-0 bg-white/95 backdrop-blur-sm z-50"
-    >
-      <div>
-        <img
-          src="./images/logo.png"
-          width="150"
-          height="150"
-          alt="Living Green Logo"
-          class="w-32 sm:w-36"
-        />
-      </div>
-      <div
-        class="sm:hidden p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
-        id="menu-toggle"
+        class="px-9 py-3 sm:py-5 flex justify-between items-center sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-md"
       >
-        <img
-          src="./images/nav-toggle.png"
-          width="18"
-          height="18"
-          alt="Menu"
-          class="w-5 h-5"
-        />
-      </div>
-      <nav class="hidden sm:block">
-        <ul class="flex gap-8 items-center">
+        <div>
+          <img
+            src="./images/logo.png"
+            width="150"
+            height="150"
+            alt="Living Green Logo"
+            class="w-32 sm:w-36"
+          />
+        </div>
+        <div
+          class="sm:hidden p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
+          id="menu-toggle"
+        >
+          <img
+            src="./images/nav-toggle.png"
+            width="18"
+            height="18"
+            alt="Menu"
+            class="w-5 h-5"
+          />
+        </div>
+        <nav class="hidden sm:block">
+          <ul class="flex sm:gap-5 md:gap-8 items-center">
+            <li>
+              <a href="#home" class="hover:text-green-700 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-green-700 transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="hover:text-green-700 transition-colors"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#team" class="hover:text-green-700 transition-colors"
+                >Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition-colors"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div
+        id="mobile-menu"
+        class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out bg-white shadow-lg w-64 p-6 z-40"
+      >
+        <div
+          class="absolute top-15 right-6 p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
+          id="close-menu"
+        >
+          <img
+            src="./images/close-navbar.svg"
+            width="18"
+            height="18"
+            alt="Close Menu"
+            class="w-5 h-5 rotate-90"
+          />
+        </div>
+        <ul class="flex flex-col gap-6 pt-12">
           <li>
             <a href="#home" class="hover:text-green-700 transition-colors"
               >Home</a
@@ -70,552 +118,449 @@
             </a>
           </li>
         </ul>
-      </nav>
-    </header>
-
-    <div
-      id="mobile-menu"
-      class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out bg-white shadow-lg w-64 p-6 z-40"
-    >
-      <div
-        class="absolute top-7 right-6 p-2 hover:bg-green-50 active:bg-green-100 rounded-full transition-all cursor-pointer"
-        id="close-menu"
-      >
-        <img
-          src="./images/nav-toggle.png"
-          width="18"
-          height="18"
-          alt="Close Menu"
-          class="w-5 h-5 rotate-90"
-        />
       </div>
-      <ul class="flex flex-col gap-6 pt-12">
-        <li>
-          <a href="#home" class="hover:text-green-700 transition-colors"
-            >Home</a
+    <div class="root px-5 sm:px-8">
+      <main class="max-w-7xl mx-auto">
+        <section id="home" class="welcome mb-20 pt-10 min-h-[200px]">
+          <div class="sm:px-8">
+            <div class="globe">
+              <img
+                src="./images/living-green-globe.png"
+                width="500"
+                height="500"
+                alt="Living Green Globe"
+                class="mt-4 mx-auto max-w-full"
+              />
+            </div>
+            <div class="text-center max-w-3xl mx-auto">
+              <h1
+                class="mb-4 text-4xl sm:text-5xl font-bold text-green-700"
+                id="welcome-to-club"
+              >
+                Welcome to the Living Green Club PAU
+              </h1>
+              <p class="mb-8 text-lg sm:text-xl text-gray-700">
+                A community dedicated to promoting environmental awareness,
+                sustainability, and conservation practices within Pan-Atlantic
+                University. Join us in protecting our campus environment, one
+                initiative at a time.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <div
+                class="text-white text-center bg-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-800 transition-colors"
+              >
+                <a href="#contact">Join Now</a>
+              </div>
+              <a
+                href="#what-we-do"
+                class="text-green-700 text-center border-2 border-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-50 transition-colors"
+              >
+                View Activities
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="about" class="about text-center mb-20 min-h-[200px]">
+          <div class="space-y-16">
+            <div class="about__mission max-w-3xl mx-auto">
+              <div>
+                <img
+                  src="./images/vision.png"
+                  class="mx-auto mb-6 w-20"
+                  alt="Eco-friendly light bulb"
+                />
+              </div>
+              <h2 class="text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
+              <hr class="w-24 mx-auto border-green-700 mb-6" />
+              <p class="text-lg text-gray-700">
+                To educate, empower and mobilize PAU students around
+                sustainability, ensuring every campus decision prioritizes
+                environmental integrity, human health, and community well-being.
+              </p>
+            </div>
+            <div class="about__what-we-do" id="what-we-do">
+              <h2 class="text-3xl font-bold mb-10 text-green-700">What We Do</h2>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+                <div
+                  class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+                >
+                  <h3 class="font-semibold text-xl">Environmental Audits</h3>
+                  <p class="text-gray-600">
+                    Regular walk-through inspections of facilities to identify
+                    hazards and provide maintenance recommendations.
+                  </p>
+                </div>
+                <div
+                  class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+                >
+                  <h3 class="font-semibold text-xl">Hazard Management</h3>
+                  <p class="text-gray-600">
+                    Monitoring and controlling physical, chemical, biological &
+                    psychosocial risks on campus.
+                  </p>
+                </div>
+                <div
+                  class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+                >
+                  <h3 class="font-semibold text-xl">Awareness Campaigns</h3>
+                  <p class="text-gray-600">
+                    Leading initiatives like the Styrofoam ban and organizing
+                    educational pop-ups in the student centre.
+                  </p>
+                </div>
+                <div
+                  class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
+                >
+                  <h3 class="font-semibold text-xl">Action Days</h3>
+                  <p class="text-gray-600">
+                    Organizing tree-planting events, campus clean-ups, and
+                    educational visits to wildlife sanctuaries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="projects text-center mb-20 min-h-[200px]">
+          <h2 class="text-3xl font-bold mb-10 text-green-700">
+            Notable Projects
+          </h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/eco-alchemy.jpeg"
+                  alt="NCF Tree Planting"
+                  class="w-full h-64 object-cover rounded-lg mx-auto"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">Eco-Alchemy</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                This project is an innovative initiative by the Living Green Club
+                at the Pan-Atlantic University (PAU) called "Eco-Alchemy: A
+                Plastic-to-Art"
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/ncf.jpg"
+                  alt="NCF Tree Planting"
+                  class="w-full h-64 object-cover rounded-lg"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">NCF Tree-Planting Exercise</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                Collaborated with NCF Green Recovery Nigeria to plant over 200
+                trees across campus, enhancing our green spaces and carbon
+                absorption capacity.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/solution17-food-a-thon.jpg"
+                  alt="Solution 17 Food-A-Thon"
+                  class="w-full h-64 object-cover rounded-lg"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">Solution 17 Food-A-Thon</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                We developed an innovative solution focused on identifying and
+                developing solutions within the food system.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/pds.jpg"
+                  alt="Sustainability Workshop"
+                  class="w-full h-64 object-cover rounded-lg"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">PDS with Industry Leaders</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                Personal Development Series featuring Mrs. Odunayo Sanya (MTN
+                Foundation) and Mrs. Dayo Aderugbo on environmental leadership.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/visit-to-green-fingers-wildlife-sanctuary.jpg"
+                  alt="Community Outreach"
+                  class="w-full h-64 object-cover rounded-lg"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">Wildlife Sanctuary Visit</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                Educational field trip to Green Fingers Wildlife Sanctuary,
+                learning about habitat protection and conservation efforts.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div>
+                <img
+                  src="./images/sensitisation.gif"
+                  alt="NCF Tree Planting"
+                  class="w-64 h-64 object-cover rounded-lg mx-auto"
+                />
+              </div>
+              <h3 class="font-semibold text-xl">Sensitisation Sessions</h3>
+              <hr class="w-16 mx-auto border-green-700" />
+              <p class="text-gray-600">
+                We have conducted multiple campaigns and movements to improve
+                awareness on the importance of preserving our environment.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="team" class="team text-center mb-20 min-h-[200px]">
+          <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
+          <div
+            class="py-8 sm:py-15 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer mx-auto max-w-[450px] flex flex-col justify-center"
           >
-        </li>
-        <li>
-          <a href="#about" class="hover:text-green-700 transition-colors"
-            >About</a
-          >
-        </li>
-        <li>
-          <a href="#projects" class="hover:text-green-700 transition-colors"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a href="#team" class="hover:text-green-700 transition-colors"
-            >Team</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="bg-green-700 text-white px-6 py-2 rounded-md hover:bg-green-800 transition-colors"
-          >
-            Contact Us
-          </a>
-        </li>
-      </ul>
+            <div class="flex items-center gap-0 sm:gap-3 mx-auto">
+              <!--Class Names:slider for the slider container, slide for each slide, active-slide for the active slide, next-btn and prev-btn for the next and previous buttons respectively-->
+              <!--Prev button-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-8 sm:w-10 h-auto"
+                onclick="prevSlide()"
+              >
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
+              </svg>
+              <div class="slider">
+                <div class="slide active-slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="./images/member1.jpeg"
+                      alt="Chukwurah Raluchukwu"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
+                  <p class="text-green-700">President</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="./images/member2.jpeg"
+                      alt="Enuma Bosah"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Enuma Bosah</h3>
+                  <p class="text-green-700">Vice President</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="./images/member3.jpeg"
+                      alt="Samuel Oyefusi"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Ibukun Afolabi</h3>
+                  <p class="text-green-700">Ast. Vice President</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member4.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Stephanie Barnabas</h3>
+                  <p class="text-green-700">Club Secretary</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member5.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Ehirotame Uddin</h3>
+                  <p class="text-green-700">Head of media</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member6.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Olivia Ezeh</h3>
+                  <p class="text-green-700">Head of Communication</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member7.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Christabel Ugwumandu</h3>
+                  <p class="text-green-700">Event Coordinator</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member8.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Mayowa Oluyoye</h3>
+                  <p class="text-green-700">Project Manager</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member9.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Michael Atuorah</h3>
+                  <p class="text-green-700">Protocol Officer</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member10.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Lucy Fagbohun</h3>
+                  <p class="text-green-700">Welfare Officer</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member11.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Anthony Okoeguale</h3>
+                  <p class="text-green-700">Club Advisor</p>
+                </div>
+                <div class="slide mx-auto">
+                  <div class="mx-auto">
+                    <img
+                      src="images/member12.jpeg"
+                      alt="Name here"
+                      class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
+                    />
+                  </div>
+                  <h3 class="font-semibold">Samuel Oyefusi</h3>
+                  <p class="text-green-700">Founding President</p>
+                </div>
+              </div>
+              <!--Next button-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-8 sm:w-10 h-auto"
+                onclick="nextSlide()"
+              >
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+              </svg>
+            </div>
+            <!-- The dots/circles (zero-indexed) -->
+            <div class="mt-2">
+              <span
+                class="dot active-dot"
+                onclick="showSlide(currentSlide = 0)"
+              ></span>
+              <span class="dot" onclick="showSlide(currentSlide = 1)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 2)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 3)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 4)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 5)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 6)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 7)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 8)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 9)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 10)"></span>
+              <span class="dot" onclick="showSlide(currentSlide = 11)"></span>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="contact text-center mb-20 min-h-[200px]">
+          <h2 class="text-3xl font-bold mb-10 text-green-700">Get In Touch</h2>
+          <div class="max-w-xl mx-auto space-y-8">
+            <p class="text-lg text-gray-700">
+              Join us in making PAU a more sustainable campus. Follow us on social
+              media or send us a message below.
+            </p>
+            <div class="flex justify-center gap-6">
+              <a
+                href="https://instagram.com/living_green_club_pau"
+                class="text-green-700 hover:text-green-800 transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://linkedin.com/company/living-green-club"
+                class="text-green-700 hover:text-green-800 transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <form class="space-y-4">
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+                  required
+                />
+              </div>
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="4"
+                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
+              ></textarea>
+              <button
+                onclick="sendMail()"
+                type="button"
+                class="bg-green-700 text-white px-8 py-3 rounded-md hover:bg-green-800 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <main class="max-w-7xl mx-auto">
-      <section id="home" class="welcome mb-20 pt-10 min-h-[200px]">
-        <div class="sm:px-8">
-          <div class="globe">
-            <img
-              src="./images/living-green-globe.png"
-              width="500"
-              height="500"
-              alt="Living Green Globe"
-              class="mt-4 mx-auto max-w-full"
-            />
-          </div>
-          <div class="text-center max-w-3xl mx-auto">
-            <h1 class="mb-4 text-4xl sm:text-5xl font-bold text-green-700">
-              Welcome to the Living Green Club PAU
-            </h1>
-            <p class="mb-8 text-lg sm:text-xl text-gray-700">
-              A community dedicated to promoting environmental awareness,
-              sustainability, and conservation practices within Pan-Atlantic
-              University. Join us in protecting our campus environment, one
-              initiative at a time.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <div
-              class="text-white text-center bg-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-800 transition-colors"
-            >
-              <a href="#contact">Join Now</a>
-            </div>
-            <a
-              href="#what-we-do"
-              class="text-green-700 text-center border-2 border-green-700 rounded-md px-12 py-3 font-semibold hover:bg-green-50 transition-colors"
-            >
-              View Activities
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about text-center mb-20 min-h-[200px]">
-        <div class="space-y-16">
-          <div class="about__mission max-w-3xl mx-auto">
-            <div>
-              <img
-                src="./images/vision.png"
-                class="mx-auto mb-6 w-20"
-                alt="Eco-friendly light bulb"
-              />
-            </div>
-            <h2 class="text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
-            <hr class="w-24 mx-auto border-green-700 mb-6" />
-            <p class="text-lg text-gray-700">
-              To educate, empower and mobilize PAU students around
-              sustainability, ensuring every campus decision prioritizes
-              environmental integrity, human health, and community well-being.
-            </p>
-          </div>
-
-          <div class="about__what-we-do" id="what-we-do">
-            <h2 class="text-3xl font-bold mb-10 text-green-700">What We Do</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-              <div
-                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
-              >
-                <h3 class="font-semibold text-xl">Environmental Audits</h3>
-                <p class="text-gray-600">
-                  Regular walk-through inspections of facilities to identify
-                  hazards and provide maintenance recommendations.
-                </p>
-              </div>
-              <div
-                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
-              >
-                <h3 class="font-semibold text-xl">Hazard Management</h3>
-                <p class="text-gray-600">
-                  Monitoring and controlling physical, chemical, biological &
-                  psychosocial risks on campus.
-                </p>
-              </div>
-              <div
-                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
-              >
-                <h3 class="font-semibold text-xl">Awareness Campaigns</h3>
-                <p class="text-gray-600">
-                  Leading initiatives like the Styrofoam ban and organizing
-                  educational pop-ups in the student centre.
-                </p>
-              </div>
-              <div
-                class="space-y-3 p-6 rounded-lg border-2 border-green-100 hover:border-green-200 transition-colors"
-              >
-                <h3 class="font-semibold text-xl">Action Days</h3>
-                <p class="text-gray-600">
-                  Organizing tree-planting events, campus clean-ups, and
-                  educational visits to wildlife sanctuaries.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="projects text-center mb-20 min-h-[200px]">
-        <h2 class="text-3xl font-bold mb-10 text-green-700">
-          Notable Projects
-        </h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/eco-alchemy.jpeg"
-                alt="NCF Tree Planting"
-                class="w-full h-64 object-cover rounded-lg mx-auto"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">Eco-Alchemy</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              This project is an innovative initiative by the Living Green Club
-              at the Pan-Atlantic University (PAU) called "Eco-Alchemy: A
-              Plastic-to-Art"
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/ncf.jpg"
-                alt="NCF Tree Planting"
-                class="w-full h-64 object-cover rounded-lg"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">NCF Tree-Planting Exercise</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              Collaborated with NCF Green Recovery Nigeria to plant over 200
-              trees across campus, enhancing our green spaces and carbon
-              absorption capacity.
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/solution17-food-a-thon.jpg"
-                alt="Solution 17 Food-A-Thon"
-                class="w-full h-64 object-cover rounded-lg"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">Solution 17 Food-A-Thon</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              We developed an innovative solution focused on identifying and
-              developing solutions within the food system.
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/pds.jpg"
-                alt="Sustainability Workshop"
-                class="w-full h-64 object-cover rounded-lg"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">PDS with Industry Leaders</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              Personal Development Series featuring Mrs. Odunayo Sanya (MTN
-              Foundation) and Mrs. Dayo Aderugbo on environmental leadership.
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/visit-to-green-fingers-wildlife-sanctuary.jpg"
-                alt="Community Outreach"
-                class="w-full h-64 object-cover rounded-lg"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">Wildlife Sanctuary Visit</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              Educational field trip to Green Fingers Wildlife Sanctuary,
-              learning about habitat protection and conservation efforts.
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div>
-              <img
-                src="./images/sensitisation.gif"
-                alt="NCF Tree Planting"
-                class="w-64 h-64 object-cover rounded-lg mx-auto"
-              />
-            </div>
-            <h3 class="font-semibold text-xl">Sensitisation Sessions</h3>
-            <hr class="w-16 mx-auto border-green-700" />
-            <p class="text-gray-600">
-              We have conducted multiple campaigns and movements to improve
-              awareness on the importance of preserving our environment.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="team" class="team text-center mb-20 min-h-[200px]">
-        <h2 class="text-3xl font-bold mb-10 text-green-700">Meet Our Team</h2>
-        <div
-          class="py-8 sm:py-15 rounded-lg bg-green-50 hover:bg-green-100 transition-colors cursor-pointer mx-auto max-w-[450px] flex flex-col justify-center"
-        >
-          <div class="flex items-center gap-0 sm:gap-3 mx-auto">
-            <!--Class Names:slider for the slider container, slide for each slide, active-slide for the active slide, next-btn and prev-btn for the next and previous buttons respectively-->
-            <!--Prev button-->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-8 sm:w-10 h-auto"
-              onclick="prevSlide()"
-            >
-              <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
-            </svg>
-            <div class="slider">
-              <div class="slide active-slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="./images/member1.jpeg"
-                    alt="Chukwurah Raluchukwu"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Chukwurah Raluchukwu</h3>
-                <p class="text-green-700">President</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="./images/member2.jpeg"
-                    alt="Enuma Bosah"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Enuma Bosah</h3>
-                <p class="text-green-700">Vice President</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="./images/member3.jpeg"
-                    alt="Samuel Oyefusi"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Ibukun Afolabi</h3>
-                <p class="text-green-700">Ast. Vice President</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member4.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Stephanie Barnabas</h3>
-                <p class="text-green-700">Club Secretary</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member5.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Ehirotame Uddin</h3>
-                <p class="text-green-700">Head of media</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member6.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Olivia Ezeh</h3>
-                <p class="text-green-700">Head of Communication</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member7.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Christabel Ugwumandu</h3>
-                <p class="text-green-700">Event Coordinator</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member8.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Mayowa Oluyoye</h3>
-                <p class="text-green-700">Project Manager</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member9.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Michael Atuorah</h3>
-                <p class="text-green-700">Protocol Officer</p>
-              </div>
-              <div class="slide mx-auto">
-                <div class="mx-auto">
-                  <img
-                    src="images/member10.jpeg"
-                    alt="Name here"
-                    class="max-w-full object-cover object-center mx-auto mb-3 rounded-2xl w-60 h-75 sm:w-80 sm:h-100"
-                  />
-                </div>
-                <h3 class="font-semibold">Lucy Fagbohun</h3>
-                <p class="text-green-700">Welfare Officer</p>
-              </div>
-            </div>
-            <!--Next button-->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              class="prev-btn hover:bg-[#0000002b] transition-colors duration-300 w-8 sm:w-10 h-auto"
-              onclick="nextSlide()"
-            >
-              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
-            </svg>
-          </div>
-          <!-- The dots/circles (zero-indexed) -->
-          <div class="mt-2">
-            <span class="dot active-dot" onclick="showSlide(currentSlide = 0)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 1)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 2)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 3)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 4)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 5)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 6)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 7)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 8)"></span>
-            <span class="dot" onclick="showSlide(currentSlide = 9)"></span>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact text-center mb-20 min-h-[200px]">
-        <h2 class="text-3xl font-bold mb-10 text-green-700">Get In Touch</h2>
-        <div class="max-w-xl mx-auto space-y-8">
-          <p class="text-lg text-gray-700">
-            Join us in making PAU a more sustainable campus. Follow us on social
-            media or send us a message below.
-          </p>
-          <div class="flex justify-center gap-6">
-            <a
-              href="https://instagram.com/living_green_club_pau"
-              class="text-green-700 hover:text-green-800 transition-colors"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://linkedin.com/company/living-green-club"
-              class="text-green-700 hover:text-green-800 transition-colors"
-            >
-              LinkedIn
-            </a>
-          </div>
-          <form class="space-y-4">
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
-                required
-              />
-            </div>
-            <textarea
-              placeholder="Your Message"
-              rows="4"
-              class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-700"
-            ></textarea>
-            <button
-              type="submit"
-              class="bg-green-700 text-white px-8 py-3 rounded-md hover:bg-green-800 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="text-center py-8 border-t">
+    <footer class="text-center py-8">
       <p class="text-gray-600">
         © 2025 Living Green Club PAU. All rights reserved.
       </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      // Mobile menu functionality
-      const toggle = document.getElementById("menu-toggle");
-      const close = document.getElementById("close-menu");
-      const menu = document.getElementById("mobile-menu");
-      const mobileLinks = document.querySelectorAll("#mobile-menu a");
-
-      [toggle, close].forEach((btn) =>
-        btn.addEventListener("click", () =>
-          menu.classList.toggle("translate-x-full")
-        )
-      );
-
-      mobileLinks.forEach((link) =>
-        link.addEventListener("click", () =>
-          menu.classList.add("translate-x-full")
-        )
-      );
-
-      // Active section highlighting
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("nav a, #mobile-menu a");
-
-      // Lower threshold for better detection
-      const observerOptions = {
-        threshold: 0.2,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            navLinks.forEach((link) => {
-              if (link.getAttribute("href") === "#" + entry.target.id) {
-                link.classList.add("text-green-700");
-              } else {
-                link.classList.remove("text-green-700");
-              }
-            });
-          }
-        });
-      }, observerOptions);
-
-      sections.forEach((section) => observer.observe(section));
-
-      // Fallback: highlight on click for instant feedback
-      navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          navLinks.forEach((l) => l.classList.remove("text-green-700"));
-          this.classList.add("text-green-700");
-        });
-      });
-
-      //Carousel scripts
-      const slider = document.querySelector(".slider");
-      const slides = document.querySelectorAll(".slide");
-      const dots = document.querySelectorAll(".dot");
-
-      let currentSlide = 0;
-      function showSlide(slideIndex) {
-        slides.forEach((slide) => {
-          slide.classList.remove("active-slide");
-        });
-
-        dots.forEach((dot) => {
-          dot.classList.remove("active-dot");
-        });
-
-        dots[slideIndex].classList.add("active-dot");
-        slides[slideIndex].classList.add("active-slide");
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      setInterval(() => {
-        nextSlide();
-      }, 3000);
+    <script src="./index.js">
     </script>
   </body>
 </html>

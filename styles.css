@@ -44,6 +44,22 @@ h3 {
 .active-dot {
   background-color: #717171;
 }
+#welcome-to-club {
+  opacity: 0;
+}
+.welcome-to-club {
+  animation: welcome-fade 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes welcome-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes fade {
   from {
@@ -54,7 +70,7 @@ h3 {
   }
 }
 .globe {
-  animation: bounce-globe 2.5s ease-in-out 2;
+  animation: bounce-globe 2.5s ease-in-out infinite;
 }
 @keyframes bounce-globe {
   0%, 100% {
