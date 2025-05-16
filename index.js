@@ -12,6 +12,24 @@ mobileLinks.forEach((link) =>
   link.addEventListener("click", () => menu.classList.add("translate-x-full"))
 );
 
+//Minor bug fix: Edge case handling for mobile menu - if the screen is resized
+const media = window.matchMedia("(width < 640px)");
+media.addEventListener("change", (e) => updateMenu(e));
+
+function updateMenu(e) {
+  const isMobile = e.matches;
+  if (isMobile) {
+    menu.classList.remove("translate-x-full");
+  } else {
+    menu.classList.add("translate-x-full");
+  }
+}
+media.addEventListener("change", (e) => {
+  if (e.matches) {
+    menu.classList.add("translate-x-full");
+  }
+});
+
 // Active section highlighting
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a, #mobile-menu a");
