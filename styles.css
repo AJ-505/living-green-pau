@@ -53,3 +53,14 @@ h3 {
     opacity: 1;
   }
 }
+.globe {
+  animation: bounce-globe 2.5s ease-in-out 2;
+}
+@keyframes bounce-globe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
