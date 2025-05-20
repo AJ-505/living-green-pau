@@ -125,4 +125,5 @@ function sendMail() {
   const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=${encodedMessage}`;
   open(mailtoLink);
   document.querySelector("#email").value = "";
+  document.querySelector("#message").value = "";
 }
