@@ -40,7 +40,7 @@ const observerOptions = {
 };
 const welcomeObserverOptions = {
   threshold: 0.4,
-}
+};
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -86,6 +86,7 @@ const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 function showSlide(slideIndex) {
+  currentSlide = slideIndex;
   slides.forEach((slide) => {
     slide.classList.remove("active-slide");
   });
@@ -96,7 +97,15 @@ function showSlide(slideIndex) {
 
   dots[slideIndex].classList.add("active-dot");
   slides[slideIndex].classList.add("active-slide");
+  clearInterval(interval);
+  interval = setInterval(() => {
+    nextSlide();
+  }, 3000);
 }
+
+let interval = setInterval(() => {
+  nextSlide();
+}, 3000);
 
 function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
@@ -108,9 +117,11 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-setInterval(() => {
-  nextSlide();
-}, 3000);
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
+});
 
 //Funcitionality for sending email
 function open(url) {
