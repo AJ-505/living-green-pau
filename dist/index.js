@@ -85,7 +85,20 @@ const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
-function showSlide(slideIndex) {
+
+let interval = setInterval(() => {
+  nextSlide(true);
+}, 3000);
+
+/*
+The auto parameter indicates whether or not the slideshow change was made automatically
+or (otherwise) intentionally by the user. It is set to false by default unless explicitly
+stated for code maintainability and also because other implementations in the HTML rely on the
+underlying functionality (for example the next and previous buttons) which would break if we
+implement this functionality otherwise.
+*/
+
+function showSlide(slideIndex, auto = false) {
   currentSlide = slideIndex;
   slides.forEach((slide) => {
     slide.classList.remove("active-slide");
@@ -97,19 +110,19 @@ function showSlide(slideIndex) {
 
   dots[slideIndex].classList.add("active-dot");
   slides[slideIndex].classList.add("active-slide");
-  clearInterval(interval);
-  interval = setInterval(() => {
-    nextSlide();
-  }, 3000);
+
+  //If the user triggered the slide change, clear the existing interval
+  if (!auto) {
+    clearInterval(interval);
+    interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+  }
 }
 
-let interval = setInterval(() => {
-  nextSlide();
-}, 3000);
-
-function nextSlide() {
+function nextSlide(auto = false) {
   currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+  showSlide(currentSlide, auto);
 }
 
 function prevSlide() {
@@ -119,7 +132,7 @@ function prevSlide() {
 
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
-    showSlide(index);
+    showSlide(index, false);
   });
 });
 
